@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineGraph - Movie & Actor Connection Explorer</title>
+    <!-- Outfit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    
+    <header>
+        <div class="brand">
+            <span class="logo">🎬</span>
+            <h1>CineGraph</h1>
+        </div>
+        <nav>
+            <button class="nav-btn active" data-tab="explorer">Explorer</button>
+            <button class="nav-btn" data-tab="degrees">Degrees of Separation</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Tab 1: Explorer -->
+        <section id="tab-explorer" class="tab-content active">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for movies, actors, directors...">
+                <div id="search-results" class="results-dropdown hidden"></div>
+            </div>
+
+            <div id="detail-view" class="detail-card hidden">
+                <!-- Content gets dynamically populated -->
+            </div>
+            
+            <div id="welcome-view" class="welcome-card">
+                <h2>Welcome to CineGraph!</h2>
+                <p>Discover deep connections in Hollywood using the power of graph databases. Try searching for actors like <strong>Christian Bale</strong>, directors like <strong>Christopher Nolan</strong>, or movies like <strong>Inception</strong> above.</p>
+            </div>
+        </section>
+
+        <!-- Tab 2: Degrees of Separation -->
+        <section id="tab-degrees" class="tab-content">
+            <div class="degree-planner">
+                <h2>Degrees of Separation</h2>
+                <p>Find the shortest path connecting two actors using graph relationships.</p>
+                <div class="inputs">
+                    <input type="text" id="actor-start" placeholder="First Actor (e.g. Christian Bale)">
+                    <span class="connector">↔</span>
+                    <input type="text" id="actor-end" placeholder="Second Actor (e.g. Leonardo DiCaprio)">
+                </div>
+                <button id="find-path-btn">Trace Connections</button>
+            </div>
+
+            <div id="path-results" class="path-card hidden">
+                <!-- Path gets dynamically populated -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by <strong>CognoDB Cloud</strong> &copy; 2026 Abhay</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

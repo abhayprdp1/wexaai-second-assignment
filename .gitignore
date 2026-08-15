@@ -1,0 +1,13 @@
+# Flask / Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+env/
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
